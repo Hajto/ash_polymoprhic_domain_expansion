@@ -13,13 +13,13 @@ defmodule AshPolymorphicDomainExpansion.Dsl do
   @callback_entity %Spark.Dsl.Entity{
     name: :callback,
     target: AshPolymorphicDomainExpansion.Callback,
-    args: [:returns, :name, :args],
+    args: [:name, :returns],
     schema: [
       returns: [
-        type: :string
+        type: :atom
       ],
       name: [
-        type: :string
+        type: :atom
       ]
     ],
     entities: [args: [@argument_entity]]
