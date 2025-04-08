@@ -1,16 +1,24 @@
 # Used by "mix format"
 spark_locals_without_parens = [
+  allow_nil?: 1,
+  argument: 2,
+  argument: 3,
+  callback: 2,
   callback: 3,
-  callback: 4,
-  callback_argument: 2,
-  callback_argument: 3
+  constraints: 1,
+  default: 1,
+  description: 1,
+  field: 1,
+  public?: 1,
+  sensitive?: 1
 ]
 
 [
   inputs: ["{mix,.formatter}.exs", "{config,lib,test}/**/*.{ex,exs}"],
   plugins: [Spark.Formatter],
-  parens_without_locals: spark_locals_without_parens,
+  locals_without_parens: spark_locals_without_parens,
   export: [
-    parens_without_locals: spark_locals_without_parens
-  ]
+    locals_without_parens: spark_locals_without_parens
+  ],
+  import: [:ash]
 ]
