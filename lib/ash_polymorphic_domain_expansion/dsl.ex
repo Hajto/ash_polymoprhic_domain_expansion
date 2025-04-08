@@ -22,7 +22,7 @@ defmodule AshPolymorphicDomainExpansion.Dsl do
         type: :string
       ]
     ],
-    entities: [args: @argument_entity]
+    entities: [args: [@argument_entity]]
   }
   @domain_expansion %Spark.Dsl.Section{
     name: :domain_expansion,
